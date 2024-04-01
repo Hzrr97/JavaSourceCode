@@ -674,8 +674,11 @@ public class HashMap<K,V> extends AbstractMap<K,V>
      * @return the table
      */
     final Node<K,V>[] resize() {
+        //原始数组
         Node<K,V>[] oldTab = table;
+        //原始数组长度
         int oldCap = (oldTab == null) ? 0 : oldTab.length;
+        //原始负载因子元素数
         int oldThr = threshold;
         int newCap, newThr = 0;
         if (oldCap > 0) {
